@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block start %}
+  
+  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <hr>
+    {{peoples}}
+
+    <table>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+        {% for people in peoples %}
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td>{{people.name}}</td>
+          <td>{{people.age}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+{% endblock %}
